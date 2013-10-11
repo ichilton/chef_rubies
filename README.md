@@ -32,7 +32,7 @@ Include the rubies default recipe (or include rubies in your run list):
 
 **node[:rubies][:list]** - array of ruby types/versions to install (defaults to: [ 'ruby 2.0.0-p195' ])
 
-**node[:rubies][:install_bundler]** - boolean specifying whether to install bundler under each ruby version (defaults to: true)
+**node[:rubies][:install_bundler]** - boolean specifying whether to install bundler under each ruby version (defaults to: true). Note that this currently only works if you are listing full ruby versions (eg: 'ruby 2.0.0-p195') - it will not work with partial version numbers, despite ruby-install supporting it.
 
 Note the attributes in the chruby_install cookbook (https://github.com/ichilton/chef_chruby_install) which you can set, for example setting the default ruby.
 
