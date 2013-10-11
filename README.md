@@ -30,7 +30,7 @@ Include the rubies default recipe (or include rubies in your run list):
 
 # Attributes
 
-**node[:rubies][:list]** - array of ruby types/versions to install, eg: [ 'ruby 1.9.3-p194' ]
+**node[:rubies][:list]** - array of ruby types/versions to install (defaults to: [ 'ruby 2.0.0-p195' ])
 
 **node[:rubies][:install_bundler]** - boolean specifying whether to install bundler under each ruby version (defaults to: true)
 
