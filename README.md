@@ -4,6 +4,8 @@ This cookbook installs different ruby versions using ruby-install (https://githu
 
 My plan is to expand this to be able to specify a list of gems to install under all rubies, a list of gems for each ruby version and a LWRP for installing gems under each ruby version.
 
+Also to do is to add tests.
+
 
 # Requirements
 
@@ -32,7 +34,9 @@ Include the rubies default recipe (or include rubies in your run list):
 
 **node[:rubies][:list]** - array of ruby types/versions to install (defaults to: [ 'ruby 2.0.0-p195' ])
 
-**node[:rubies][:install_bundler]** - boolean specifying whether to install bundler under each ruby version (defaults to: true). Note that this currently only works if you are listing full ruby versions (eg: 'ruby 2.0.0-p195') - it will not work with partial version numbers, despite ruby-install supporting it.
+**node[:rubies][:install_bundler]** - boolean specifying whether to install bundler under each ruby version (defaults to: true). Note that this currently only works if you are listing full ruby versions (eg: 'ruby 2.0.0-p195').
+
+The bundler install will not currently work with partial version numbers (eg: "ruby-install ruby" or "ruby-install ruby 1.9.3"), despite ruby-install supporting it. I'm working with Ross on support in the chef_ruby-install cookbook for this.
 
 Note the attributes in the chruby_install cookbook (https://github.com/ichilton/chef_chruby_install) which you can set, for example setting the default ruby.
 
