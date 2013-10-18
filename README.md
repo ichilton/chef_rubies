@@ -11,11 +11,18 @@ Also to do is to add tests.
 
 The following cookbooks are required:
 
+**build_essential** - install the required build tools & compilers - https://github.com/opscode-cookbooks/build-essential
+
 **chruby_install** - install chruby. Not currently on the community site, but available here: https://github.com/ichilton/chef_chruby_install
 
 **ruby_install** - install rubies using ruby-install - https://github.com/rosstimson/chef-ruby_install
 
 **Currently only tested on Ubuntu 12.04**
+
+The included Vagrantfile requires the vagrant-berkshelf and vagrant-omnibus plugins:
+
+    vagrant plugin install vagrant-berkshelf
+    vagrant plugin install vagrant-omnibus
 
 
 # Usage
