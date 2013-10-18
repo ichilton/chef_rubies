@@ -3,6 +3,7 @@
 # Recipe:: default
 #
 
+include_recipe 'build-essential'
 include_recipe 'chruby_install'
 include_recipe 'ruby_install'
 
